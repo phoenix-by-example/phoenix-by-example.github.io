@@ -2,19 +2,49 @@
   
     
       <url>
-        <loc>https://phoenixbyexample.com/categories/</loc>
+        <loc>https://phoenixbyexample.com/tags/dialyzer/</loc>
+        <lastmod>2021-01-20T08:51:42-05:00</lastmod>
       </url>
     
   
     
       <url>
         <loc>https://phoenixbyexample.com/</loc>
+        <lastmod>2021-01-20T08:51:42-05:00</lastmod>
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://phoenixbyexample.com/posts/</loc>
+        <lastmod>2021-01-20T08:51:42-05:00</lastmod>
       </url>
     
   
     
       <url>
         <loc>https://phoenixbyexample.com/tags/</loc>
+        <lastmod>2021-01-20T08:51:42-05:00</lastmod>
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://phoenixbyexample.com/tags/typespecs/</loc>
+        <lastmod>2021-01-20T08:51:42-05:00</lastmod>
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://phoenixbyexample.com/posts/typespecs-and-dialyzer-tradeoffs/</loc>
+        <lastmod>2021-01-20T08:51:42-05:00</lastmod>
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://phoenixbyexample.com/categories/</loc>
       </url>
     
   
