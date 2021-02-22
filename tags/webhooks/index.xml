@@ -1,0 +1,23 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webhooks on Phoenix by Example</title>
+    <link>https://phoenixbyexample.com/tags/webhooks/</link>
+    <description>Recent content in webhooks on Phoenix by Example</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Feb 2021 14:00:00 -0500</lastBuildDate>
+    
+      <atom:link href="https://phoenixbyexample.com/tags/webhooks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      <item>
+        <title>Securing Webhook Payload Delivery in Phoenix</title>
+        <link>https://phoenixbyexample.com/posts/securing-webhook-payload-delivery-in-phoenix/</link>
+        <pubDate>Mon, 22 Feb 2021 14:00:00 -0500</pubDate>
+        <guid>https://phoenixbyexample.com/posts/securing-webhook-payload-delivery-in-phoenix/</guid>
+        <description>Some of the most interesting and valuable behaviors we can build as web developers are through connecting different web applications together. Often times this comes in the form of webhooks, where one web app will POST events to your own web app. Keeping that communication secure is important and today we will take a peak into how you can secure webhook payloads in a Phoenix application.
+Webhook Security 101 Webhook might sound like some scary, exotic term but at the end of the day webhooks are nothing more that a web server endpoint configured to receive HTTP POST requests in some agreed upon format.</description>
+      </item>
+    
+  </channel>
+</rss>
