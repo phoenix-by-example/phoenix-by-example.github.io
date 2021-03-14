@@ -5,10 +5,20 @@
     <description>Recent content in List of posts on Phoenix by Example</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Feb 2021 14:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 14 Mar 2021 16:55:21 -0400</lastBuildDate>
     
       <atom:link href="https://phoenixbyexample.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+      <item>
+        <title>RetroTaxi Project Kickoff</title>
+        <link>https://phoenixbyexample.com/posts/retro-taxi-project-kickoff/</link>
+        <pubDate>Sun, 14 Mar 2021 16:55:21 -0400</pubDate>
+        <guid>https://phoenixbyexample.com/posts/retro-taxi-project-kickoff/</guid>
+        <description>Phoenix by Example is all about crafting educational content extracted from open source example projects. Today I am kicking off my latest example project, RetroTaxi!
+From the pitch document:
+ A retrospective meeting is a regular practice of agile teams or any group of people who are looking for continued improvement to their team process, communication or habits. Successful retro meetings give the team an opportunity to reflect on what is working, what is not and what they want to do next.</description>
+      </item>
     
       <item>
         <title>Securing Webhook Payload Delivery in Phoenix</title>

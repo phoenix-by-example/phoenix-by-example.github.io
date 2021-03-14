@@ -2,6 +2,27 @@
   
     
       <url>
+        <loc>https://phoenixbyexample.com/</loc>
+        <lastmod>2021-03-14T16:55:21-04:00</lastmod>
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://phoenixbyexample.com/posts/</loc>
+        <lastmod>2021-03-14T16:55:21-04:00</lastmod>
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://phoenixbyexample.com/posts/retro-taxi-project-kickoff/</loc>
+        <lastmod>2021-03-14T16:55:21-04:00</lastmod>
+      </url>
+    
+  
+    
+      <url>
         <loc>https://phoenixbyexample.com/tags/api/</loc>
         <lastmod>2021-02-22T14:00:00-05:00</lastmod>
       </url>
@@ -10,20 +31,6 @@
     
       <url>
         <loc>https://phoenixbyexample.com/tags/github/</loc>
-        <lastmod>2021-02-22T14:00:00-05:00</lastmod>
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://phoenixbyexample.com/</loc>
-        <lastmod>2021-02-22T14:00:00-05:00</lastmod>
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://phoenixbyexample.com/posts/</loc>
         <lastmod>2021-02-22T14:00:00-05:00</lastmod>
       </url>
     
