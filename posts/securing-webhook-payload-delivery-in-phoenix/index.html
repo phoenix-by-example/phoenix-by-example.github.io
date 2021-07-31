@@ -37,7 +37,7 @@
 <meta itemprop="description" content="Webhook might sound like some scary, exotic term but at the end of the day webhooks are nothing more that a web server endpoint configured to receive HTTP POST requests in some agreed upon format. The concern however is, without any additional security, anyone could discover the endpoint and start sending their own malicious payloads to your web application.">
 <meta itemprop="datePublished" content="2021-02-22T14:00:00-05:00" />
 <meta itemprop="dateModified" content="2021-02-22T14:00:00-05:00" />
-<meta itemprop="wordCount" content="1102">
+<meta itemprop="wordCount" content="1105">
 
 
 
@@ -84,7 +84,7 @@
   <span class="k">end</span>
 
   <span class="kd">def</span> <span class="n">generate_payload_signature</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="n">app_secret</span><span class="p">)</span> <span class="k">do</span>
-    <span class="p">{</span><span class="ss">:ok</span><span class="p">,</span> <span class="ss">:crypto</span><span class="o">.</span><span class="n">hmac</span><span class="p">(</span><span class="ss">:sha256</span><span class="p">,</span> <span class="n">app_secret</span><span class="p">,</span> <span class="n">payload</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="nc">Base</span><span class="o">.</span><span class="n">encode64</span><span class="p">()}</span>
+    <span class="p">{</span><span class="ss">:ok</span><span class="p">,</span> <span class="ss">:crypto</span><span class="o">.</span><span class="n">mac</span><span class="p">(</span><span class="ss">:hmac</span><span class="p">,</span> <span class="ss">:sha256</span><span class="p">,</span> <span class="n">app_secret</span><span class="p">,</span> <span class="n">payload</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="nc">Base</span><span class="o">.</span><span class="n">encode16</span><span class="p">(</span><span class="ss">case</span><span class="p">:</span> <span class="ss">:lower</span><span class="p">)}</span>
   <span class="k">end</span>
 </code></pre></div><p>Second we&rsquo;ll need a way to pull out the signature from the connection&rsquo;s request headers, if present:</p>
 <div class="highlight"><pre class="chroma"><code class="language-elixir" data-lang="elixir">  <span class="kd">defp</span> <span class="n">signature_from_req_headers</span><span class="p">(</span><span class="n">req_headers</span><span class="p">)</span> <span class="k">do</span>
@@ -110,8 +110,11 @@
 
   <span class="kd">defp</span> <span class="n">is_payload_signature_valid?</span><span class="p">(</span><span class="n">payload_signature</span><span class="p">,</span> <span class="n">payload</span><span class="p">)</span> <span class="k">do</span>
     <span class="k">case</span> <span class="n">generate_payload_signature</span><span class="p">(</span><span class="n">payload</span><span class="p">,</span> <span class="n">webhook_secret</span><span class="p">())</span> <span class="k">do</span>
-      <span class="p">{</span><span class="ss">:ok</span><span class="p">,</span> <span class="o">^</span><span class="n">payload_signature</span><span class="p">}</span> <span class="o">-&gt;</span> <span class="no">true</span>
-      <span class="n">_</span> <span class="o">-&gt;</span> <span class="no">false</span>
+      <span class="p">{</span><span class="ss">:ok</span><span class="p">,</span> <span class="n">generated_payload_signature</span><span class="p">}</span> <span class="o">-&gt;</span>
+        <span class="nc">Plug.Crypto</span><span class="o">.</span><span class="n">secure_compare</span><span class="p">(</span><span class="n">generated_payload_signature</span><span class="p">,</span> <span class="n">payload_signature</span><span class="p">)</span>
+
+      <span class="n">_</span> <span class="o">-&gt;</span>
+        <span class="no">false</span>
     <span class="k">end</span>
   <span class="k">end</span>
 
