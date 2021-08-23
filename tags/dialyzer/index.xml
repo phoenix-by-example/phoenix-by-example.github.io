@@ -15,9 +15,7 @@
         <link>https://phoenixbyexample.com/posts/typespecs-and-dialyzer-tradeoffs/</link>
         <pubDate>Wed, 20 Jan 2021 08:51:42 -0500</pubDate>
         <guid>https://phoenixbyexample.com/posts/typespecs-and-dialyzer-tradeoffs/</guid>
-        <description>In today&amp;rsquo;s post I want to start a conversation around the tradeoffs of using Typespecs and Dialyzer use in your Elixir code.
-Elixir is a dynamic, not a statically-typed language &amp;ndash; and just to preemptively avoid the programming wars that might ensue, the given type system of a language is not a &amp;ldquo;good&amp;rdquo; or &amp;ldquo;bad&amp;rdquo; attribute by itself, but it will none-the-less influences the code we write.
-For those who prefer or come to Elixir from a statically-typed language background you may be interested in learning more about Elixir Typespecs, described in the documentation as follows:</description>
+        <description></description>
       </item>
     
   </channel>
